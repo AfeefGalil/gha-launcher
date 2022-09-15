@@ -1,0 +1,39 @@
+name: Github actions launcher
+on:
+  push:
+    paths:
+      - '.github/workflows/maven.yaml'
+    branches:
+      - master
+      - main
+      - develop
+      - candidate
+
+jobs:
+  build_maven:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        repository: simple-java-maven-app
+        ref: master
+
+    - name: Setup JAVA
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '8'
+        cache: 'maven'
+
+    - name: Build with Maven
+      run: mvn install
+
+    - name: list dir's
+      run: |
+          ls -lah
+
+    - name: list .m2 dir
+      run: |
+          ls ~/.m2/repository
