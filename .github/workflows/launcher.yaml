@@ -19,3 +19,5 @@ jobs:
       with:
         repository: AfeefGalil/simple-java-maven-app
         ref: master
+    - name: ls dir
+      run: ls -lah
