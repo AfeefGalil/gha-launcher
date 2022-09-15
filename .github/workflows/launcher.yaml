@@ -23,3 +23,16 @@ jobs:
           workflow_file_name: build_maven.yaml
           ref: master
           wait_workflow: true
+  workflow2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger workflow1
+        uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: afeefgalil
+          repo: simple-java-maven-app2
+          github_token: ${{ secrets.GH_TOKEN }}
+          workflow_file_name: build_maven.yaml
+          ref: master
+          wait_workflow: true
