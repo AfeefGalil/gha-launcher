@@ -27,13 +27,16 @@ jobs:
         java-version: '8'
         cache: 'maven'
 
-    - name: Build with Maven
-      run: mvn install
+    - name: print hello
+      run: echo 'Hello world'
 
-    - name: list dir's
-      run: |
-          ls -lah
+    # - name: Build with Maven
+    #   run: mvn install
 
-    - name: list .m2 dir
-      run: |
-          ls ~/.m2/repository
+    # - name: list dir's
+    #   run: |
+    #       ls -lah
+
+    # - name: list .m2 dir
+    #   run: |
+    #       ls ~/.m2/repository
