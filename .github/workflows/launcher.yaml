@@ -1,0 +1,21 @@
+name: Github actions launcher
+on:
+  push:
+    paths:
+      - '.github/workflows/launcher.yaml'
+    branches:
+      - master
+      - main
+      - develop
+      - candidate
+
+jobs:
+  workflow1:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: workflow1
+      uses: actions/checkout@v3
+      with:
+        repository: AfeefGalil/simple-java-maven-app
+        ref: master
