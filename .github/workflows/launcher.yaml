@@ -11,7 +11,7 @@ on:
 
 jobs:
   workflow1:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Trigger workflow1
@@ -22,9 +22,10 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
           workflow_file_name: build_maven.yaml
           ref: master
-          
+
   workflow2:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
+      
       steps:
       - name: Trigger workflow2
         uses: convictional/trigger-workflow-and-wait@v1.6.1
