@@ -16,6 +16,9 @@ jobs:
     steps:
     - name: workflow1
       uses: actions/checkout@v3
-      
+      with:
+        repository: AfeefGalil/simple-java-maven-app
+        ref: master
+
   workflow1:
     uses: AfeefGalil/simple-java-maven-app/.github/workflows/build_maven.yaml@master
