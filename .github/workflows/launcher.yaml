@@ -21,4 +21,4 @@ jobs:
         ref: master
 
   workflow1:
-    uses: AfeefGalil/simple-java-maven-app/.github/workflows/build_maven.yaml@master
+    uses: AfeefGalil/simple-java-maven-app/.github/workflows/build_maven.yaml@master 
