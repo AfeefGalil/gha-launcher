@@ -22,7 +22,7 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
           workflow_file_name: build_maven.yaml
           ref: master
-          wait_workflow: true
+          # wait_workflow: true
 
       - name: Trigger workflow2
         uses: convictional/trigger-workflow-and-wait@v1.6.1
@@ -32,4 +32,4 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
           workflow_file_name: build_maven.yaml
           ref: main
-          wait_workflow: true
+          # wait_workflow: true
