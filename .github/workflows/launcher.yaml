@@ -17,11 +17,9 @@ jobs:
       - name: Trigger workflow1
         uses: convictional/trigger-workflow-and-wait@v1.6.1
         with:
-          owner: AfeefGalil
+          owner: afeefgalil
           repo: simple-java-maven-app
           github_token: ${{ secrets.GH_TOKEN }}
-          github_user: afeefgalil
           workflow_file_name: build_maven.yaml
           ref: master
-          trigger_workflow: true
           wait_workflow: true
