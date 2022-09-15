@@ -22,4 +22,4 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
           workflow_file_name: build_maven.yaml
           ref: master
-          wait_workflow: true  
+          wait_workflow: true
