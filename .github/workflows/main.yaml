@@ -23,7 +23,7 @@ jobs:
 
   deploy_stg:
     runs-on: self-hosted
-    needs: [build, test]
+    # needs: [build, test]
 
     steps:
       - name: deploy stg
