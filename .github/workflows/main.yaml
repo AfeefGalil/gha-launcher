@@ -9,26 +9,31 @@ on:
 jobs:
   build:
     runs-on: self-hosted
+    outputs:
+      image-name: ${{ steps.building.outputs.image-name }}
 
     steps:
       - name: building
-        run: echo "building"
+        id: building
+        run: echo "::set-output name=image-name::afeef-image"
 
   test:
     runs-on: self-hosted
+    needs: [build]
 
     steps:
       - name: testing
         run: echo "testing"
 
-  deploy_stg:
-    runs-on: self-hosted
-    # needs: [build, test]
 
-    steps:
-      - name: deploy stg
-        run: echo "deploy stg"
+  deploy_stg:
+    needs: [build, test]
+    uses: afeefgalil/gha-launcher/.github/workflows/stg.yaml@main
+    with:
+     image_name: ${{needs.build.outputs.image-name}}
 
   deploy_prod:
-    needs: [deploy_stg]
+    needs: [build, test]
     uses: afeefgalil/gha-launcher/.github/workflows/prod.yaml@main
+    with:
+     image_name: ${{needs.build.outputs.image-name}}

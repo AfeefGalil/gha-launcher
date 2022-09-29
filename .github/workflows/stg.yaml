@@ -1,10 +1,10 @@
-name: Prod
+name: Staging
 on:
   push:
     branches:
       - main
     paths:
-      - '.github/workflows/prod.yaml'
+      - '.github/workflows/stg.yaml'
   workflow_call:
     inputs:
       image_name:
@@ -19,9 +19,8 @@ on:
         description: image name
 
 jobs:
-  deploy_prod:
+  deploy_stg:
     runs-on: self-hosted
-    environment: production
 
     steps:
       - name: image

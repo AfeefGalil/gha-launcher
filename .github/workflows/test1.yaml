@@ -10,7 +10,7 @@ jobs:
   test1:
     runs-on: self-hosted
     environment: production
-
+  
     steps:
       - name: test1
         run: echo "test 1"
