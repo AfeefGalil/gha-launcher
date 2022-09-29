@@ -1,0 +1,22 @@
+name: Manuall approval
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/manuall_approval.yaml'
+
+jobs:
+  deploy_prod:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          approvers: afeefgalil
+          minimum-approvals: 1
+          issue-title: "Deploying to prod"
+
+      - name: deploying production
+        run: echo "deploying production"
