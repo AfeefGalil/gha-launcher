@@ -31,5 +31,4 @@ jobs:
 
   deploy_prod:
     uses: afeefgalil/prod/.github/workflows/main.yaml@master
-    with:
-      target: production
+    secrets: inherit
