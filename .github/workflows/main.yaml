@@ -31,4 +31,4 @@ jobs:
 
   deploy_prod:
     needs: [deploy_stg]
-    uses: .github/workflows/main.yaml@master
+    uses: afeefgalil/prod/.github/workflows/main.yaml@master
