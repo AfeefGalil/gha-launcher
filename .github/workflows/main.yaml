@@ -31,4 +31,4 @@ jobs:
 
   deploy_prod:
     needs: [deploy_stg]
-    uses: afeefgalil/gha-launcher/.github/workflows/main.yaml@master
+    uses: afeefgalil/gha-launcher/.github/workflows/prod.yaml@main
