@@ -1,0 +1,17 @@
+name: Prod
+on:
+  workflow_call:
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/prod.yaml'
+
+jobs:
+  deploy_prod:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: deploying production
+        run: echo "deploying production"
