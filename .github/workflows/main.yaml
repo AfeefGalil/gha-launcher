@@ -30,4 +30,9 @@ jobs:
         run: echo "deploy stg"
 
   deploy_prod:
-    uses: afeefgalil/prod/.github/workflows/main.yaml@master
+    runs-on: ubuntu-latest
+    environment: production
+    needs: [deploy_stg]
+
+    steps:
+      - uses: afeefgalil/prod/.github/workflows/main.yaml@master
