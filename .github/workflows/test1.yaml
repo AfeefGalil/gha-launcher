@@ -13,4 +13,4 @@ jobs:
 
     steps:
       - name: test1
-        run: echo "test 1" 
+        run: echo "test 1"

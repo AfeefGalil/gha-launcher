@@ -12,4 +12,4 @@ jobs:
 
     steps:
       - name: test2
-        run: echo "test 2" 
+        run: echo "test 2"
