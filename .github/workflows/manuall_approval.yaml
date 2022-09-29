@@ -20,4 +20,4 @@ jobs:
           secret: ${{ github.GH_TOKEN }}
 
       - name: deploying production
-        run: echo "deploying production"
+        run: echo "deploying production" 
