@@ -8,7 +8,7 @@ on:
 
 jobs:
   test1:
-    runs-on: [self-hosted, linux, x64, test1]
+    runs-on: [self-hosted, test1]
   
     steps:
       - name: test1
