@@ -1,10 +1,10 @@
 name: Prod
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - '.github/workflows/prod.yaml'
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - '.github/workflows/prod.yaml'
   workflow_call:
     inputs:
       image_name:
