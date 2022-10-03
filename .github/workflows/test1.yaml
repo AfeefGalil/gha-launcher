@@ -13,4 +13,11 @@ jobs:
     steps:
       - name: test11111
         run: echo "test 1"
+
+  test2:
+    runs-on: [self-hosted]
+  
+    steps:
+      - name: test2222
+        run: echo "test 2"
         
