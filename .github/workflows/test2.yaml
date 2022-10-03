@@ -8,7 +8,14 @@ on:
 
 jobs:
   test2:
-    runs-on: [self-hosted, test2]
+    runs-on: [self-hosted]
+
+    steps:
+      - name: test2
+        run: echo "test 2"
+
+  test22:
+    runs-on: [self-hosted]
 
     steps:
       - name: test2
