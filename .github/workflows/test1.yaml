@@ -14,9 +14,9 @@ jobs:
       - name: test1
         run: echo "test 1"
 
-  test2:
+  job2:
     runs-on: [self-hosted]
-  
+    
     steps:
       - name: test2
         run: echo "test 2"
