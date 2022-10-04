@@ -7,14 +7,14 @@ on:
       - '.github/workflows/test2.yaml'
 
 jobs:
-  test2:
+  test1:
     runs-on: [self-hosted]
 
     steps:
       - name: test2
         run: echo "test 2"
 
-  test22:
+  test2:
     runs-on: [self-hosted]
 
     steps:
