@@ -8,15 +8,8 @@ on:
 
 jobs:
   job1:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
   
     steps:
-      - name: test1
-        run: echo "test 1"
-
-  job2:
-    runs-on: [self-hosted]
-    
-    steps:
-      - name: test2
-        run: echo "test 2"
+      - name: ssh
+        run: ssh -T git@github.com
