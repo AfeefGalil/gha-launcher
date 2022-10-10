@@ -11,5 +11,9 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
+      - uses: actions/checkout@v3
+        with:
+          ssh-key: ${{ secrets.SSH_KEY }}
+
       - name: ssh
-        run: cat ${{ secrets.SSH_KEY }} | ssh -T git@github.com 
+        run: ssh -T git@github.com 
