@@ -16,4 +16,4 @@ jobs:
           ssh-key: ${{ secrets.SSH_KEY }}
 
       - name: ssh
-        run: ssh -T git@github.com 
+        run: ssh -T git@github.com
